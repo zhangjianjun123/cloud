@@ -8,5 +8,13 @@
     <artifactId>springcloud-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
+        <modules>
+            <module>consumer-demo01</module>
+            <module>provider-boot</module>
+            <module>provider-boot02</module>
+            <module>provider-boot03</module>
+            <module>register</module>
+            <module>register02</module>
+            <module>register03</module>
+        </modules>
 </project>
