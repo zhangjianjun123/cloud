@@ -10,6 +10,7 @@
 
         <modules>
             <module>consumer-demo01</module>
+            <module>consumer-demo</module>
             <module>provider-boot</module>
             <module>provider-boot02</module>
             <module>provider-boot03</module>

@@ -6,7 +6,7 @@ eureka:
     instance-id: provider-boot-User8000 #自定义服务名称
     prefer-ip-address: true       #访问路径显示ip地址
 server:
-  port: 8000
+  port: 3456
 spring:
   application:
     name: consumer-demo-boot

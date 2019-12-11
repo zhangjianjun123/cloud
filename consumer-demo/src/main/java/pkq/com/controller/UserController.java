@@ -13,14 +13,10 @@ import java.util.List;
 @RestController
 public class UserController {
 
-    private static final String URL_Rest="http://PROVIDERBOOT";
 
-    @Autowired
-    RestTemplate template;
+
     @GetMapping("/user")
     public List<User> getUser(){
-        System.out.println(template);
-        System.out.println(URL_Rest);
         List<User> aBoolean = template.getForObject(URL_Rest+"/crud", List.class);
         return aBoolean;
     }
