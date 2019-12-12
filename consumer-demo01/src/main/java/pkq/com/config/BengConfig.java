@@ -12,8 +12,9 @@ import org.springframework.web.client.RestTemplate;
 public class BengConfig {
     //默认轮训
     @Bean
-    @LoadBalanced //负载均衡
-    RestTemplate restTemplate(){
+    @LoadBalanced
+    //负载均衡
+    RestTemplate restTemplate() {
         return new RestTemplate();
     }
     /*//随机

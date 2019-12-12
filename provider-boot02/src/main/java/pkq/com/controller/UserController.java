@@ -12,18 +12,19 @@ import java.util.List;
 @RestController
 public class UserController {
 
-        @Autowired
-        UserService userService;
+    @Autowired
+    UserService userService;
 
-        @RequestMapping(value = "/hello",method = RequestMethod.GET)
-        public String index(){
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String index() {
 
-                return "Hello World ";
-        }
-        @RequestMapping(value = "/crud",method = RequestMethod.GET)
-        public  List<User> crud(){
-                List<User> hello = userService.hello();
-                System.out.println(hello.toString());
-                return hello;
-        }
+        return "Hello World ";
+    }
+
+    @RequestMapping(value = "/crud", method = RequestMethod.GET)
+    public List<User> crud() {
+        List<User> hello = userService.hello();
+        System.out.println(hello.toString());
+        return hello;
+    }
 }

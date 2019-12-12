@@ -4,6 +4,7 @@ import org.apache.ibatis.annotations.Mapper;
 import pkq.com.bean.User;
 
 import java.util.List;
+
 @Mapper
 public interface UserMapper {
 

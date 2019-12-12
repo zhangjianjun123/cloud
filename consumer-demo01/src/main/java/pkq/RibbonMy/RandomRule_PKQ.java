@@ -8,69 +8,68 @@ import com.netflix.loadbalancer.Server;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class RandomRule_PKQ  extends AbstractLoadBalancerRule {
+public class RandomRule_PKQ extends AbstractLoadBalancerRule {
 
-    private int index =0;
-    private int currentIndex =0;
+    private int index = 0;
+    private int currentIndex = 0;
 
-//*****************************************************
-  public Server choose(ILoadBalancer lb, Object key) {
-    if (lb == null) {
-        return null;
-    }
-    Server server = null;
-
-    while (server == null) {
-        if (Thread.interrupted()) {
+    //*****************************************************
+    public Server choose(ILoadBalancer lb, Object key) {
+        if (lb == null) {
             return null;
         }
-        List<Server> upList = lb.getReachableServers();
-        List<Server> allList = lb.getAllServers();
+        Server server = null;
 
-        int serverCount = allList.size();
-        if (serverCount == 0) {
-            /*
-             * No servers. End regardless of pass, because subsequent passes
-             * only get more restrictive.
-             */
-            return null;
-        }
+        while (server == null) {
+            if (Thread.interrupted()) {
+                return null;
+            }
+            List<Server> upList = lb.getReachableServers();
+            List<Server> allList = lb.getAllServers();
 
-    //        int index = chooseRandomInt(serverCount);
-    //        server = upList.get(index);
-                if (index <5){
-                    server = upList.get(currentIndex);
-                    index++;
-                }else {
-                    index =0;
-                    currentIndex++;
-                    if (currentIndex >=upList.size())
-                    {
-                        currentIndex=0;
-                    }
+            int serverCount = allList.size();
+            if (serverCount == 0) {
+                /*
+                 * No servers. End regardless of pass, because subsequent passes
+                 * only get more restrictive.
+                 */
+                return null;
+            }
+
+            //        int index = chooseRandomInt(serverCount);
+            //        server = upList.get(index);
+            if (index < 5) {
+                server = upList.get(currentIndex);
+                index++;
+            } else {
+                index = 0;
+                currentIndex++;
+                if (currentIndex >= upList.size()) {
+                    currentIndex = 0;
                 }
-        if (server == null) {
-            /*
-             * The only time this should happen is if the server list were
-             * somehow trimmed. This is a transient condition. Retry after
-             * yielding.
-             */
+            }
+            if (server == null) {
+                /*
+                 * The only time this should happen is if the server list were
+                 * somehow trimmed. This is a transient condition. Retry after
+                 * yielding.
+                 */
+                Thread.yield();
+                continue;
+            }
+
+            if (server.isAlive()) {
+                return (server);
+            }
+
+            // Shouldn't actually happen.. but must be transient or a bug.
+            server = null;
             Thread.yield();
-            continue;
         }
 
-        if (server.isAlive()) {
-            return (server);
-        }
+        return server;
 
-        // Shouldn't actually happen.. but must be transient or a bug.
-        server = null;
-        Thread.yield();
     }
-
-    return server;
-
-}
 
     protected int chooseRandomInt(int serverCount) {
         return ThreadLocalRandom.current().nextInt(serverCount);

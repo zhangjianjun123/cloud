@@ -12,14 +12,14 @@ import pkq.RibbonMy.Config;
 
 @EnableEurekaClient
 @SpringBootApplication
-@RibbonClient(name = "PROVIDERBOOT",configuration = Config.class)
+@RibbonClient(name = "PROVIDERBOOT", configuration = Config.class)
 public class ConsumerDemoApplication {
-   /* @Bean
-    @LoadBalanced
-        //负载均衡
-    RestTemplate restTemplate(){
-        return new RestTemplate();
-    }*/
+    /* @Bean
+     @LoadBalanced
+         //负载均衡
+     RestTemplate restTemplate(){
+         return new RestTemplate();
+     }*/
     public static void main(String[] args) {
         SpringApplication.run(ConsumerDemoApplication.class, args);
     }

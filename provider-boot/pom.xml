@@ -33,10 +33,10 @@
         </dependency>
         <!--cloud整合注册中心-->
 
-       <!-- <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>-->
+        <!-- <dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-starter-eureka</artifactId>
+         </dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -101,7 +101,7 @@
     </dependencyManagement>
 
     <build>
-      <finalName>provider-boot</finalName>
+        <finalName>provider-boot</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>

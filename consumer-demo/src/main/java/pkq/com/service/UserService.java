@@ -10,6 +10,6 @@ import java.util.List;
 
 @FeignClient(value = "PROVIDERBOOT")
 public interface UserService {
-    @RequestMapping(value = "/crud",method = RequestMethod.GET)
+    @RequestMapping(value = "/crud", method = RequestMethod.GET)
     public List<User> hello();
 }

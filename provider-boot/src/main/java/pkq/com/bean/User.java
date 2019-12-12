@@ -19,6 +19,7 @@ public class User {
     private String sex;
 
     private Integer age;
+
     public User() {
     }
 
@@ -31,6 +32,7 @@ public class User {
         this.sex = sex;
         this.age = age;
     }
+
     /**
      * @return id
      */

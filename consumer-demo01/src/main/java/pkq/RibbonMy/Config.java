@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Configuration;
 public class Config {
 
 
-        @Bean
-        public IRule MyIRules(){
-            return  new RandomRule_PKQ();
-        }
+    @Bean
+    public IRule MyIRules() {
+        return new RandomRule_PKQ();
+    }
 }

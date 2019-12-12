@@ -1,19 +1,19 @@
 package pkq.com.bean;
 
 public class User {
-        private Integer id;
+    private Integer id;
 
-        private String name;
+    private String name;
 
-        private String pwd;
+    private String pwd;
 
-        private String mm;
+    private String mm;
 
-        private String hp;
+    private String hp;
 
-        private String sex;
+    private String sex;
 
-        private Integer age;
+    private Integer age;
 
     public User() {
     }
@@ -29,100 +29,100 @@ public class User {
     }
 
     /**
-         * @return id
-         */
-        public Integer getId() {
-            return id;
-        }
+     * @return id
+     */
+    public Integer getId() {
+        return id;
+    }
 
-        /**
-         * @param id
-         */
-        public void setId(Integer id) {
-            this.id = id;
-        }
+    /**
+     * @param id
+     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-        /**
-         * @return name
-         */
-        public String getName() {
-            return name;
-        }
+    /**
+     * @return name
+     */
+    public String getName() {
+        return name;
+    }
 
-        /**
-         * @param name
-         */
-        public void setName(String name) {
-            this.name = name;
-        }
+    /**
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
-        /**
-         * @return pwd
-         */
-        public String getPwd() {
-            return pwd;
-        }
+    /**
+     * @return pwd
+     */
+    public String getPwd() {
+        return pwd;
+    }
 
-        /**
-         * @param pwd
-         */
-        public void setPwd(String pwd) {
-            this.pwd = pwd;
-        }
+    /**
+     * @param pwd
+     */
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
 
-        /**
-         * @return mm
-         */
-        public String getMm() {
-            return mm;
-        }
+    /**
+     * @return mm
+     */
+    public String getMm() {
+        return mm;
+    }
 
-        /**
-         * @param mm
-         */
-        public void setMm(String mm) {
-            this.mm = mm;
-        }
+    /**
+     * @param mm
+     */
+    public void setMm(String mm) {
+        this.mm = mm;
+    }
 
-        /**
-         * @return hp
-         */
-        public String getHp() {
-            return hp;
-        }
+    /**
+     * @return hp
+     */
+    public String getHp() {
+        return hp;
+    }
 
-        /**
-         * @param hp
-         */
-        public void setHp(String hp) {
-            this.hp = hp;
-        }
+    /**
+     * @param hp
+     */
+    public void setHp(String hp) {
+        this.hp = hp;
+    }
 
-        /**
-         * @return sex
-         */
-        public String getSex() {
-            return sex;
-        }
+    /**
+     * @return sex
+     */
+    public String getSex() {
+        return sex;
+    }
 
-        /**
-         * @param sex
-         */
-        public void setSex(String sex) {
-            this.sex = sex;
-        }
+    /**
+     * @param sex
+     */
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
 
-        /**
-         * @return age
-         */
-        public Integer getAge() {
-            return age;
-        }
+    /**
+     * @return age
+     */
+    public Integer getAge() {
+        return age;
+    }
 
-        /**
-         * @param age
-         */
-        public void setAge(Integer age) {
-            this.age = age;
-        }
+    /**
+     * @param age
+     */
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 }

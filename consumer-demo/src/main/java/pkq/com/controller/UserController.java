@@ -16,11 +16,11 @@ import java.util.List;
 @RestController
 public class UserController {
 
-@Autowired
-private UserService userService;
+    @Autowired
+    private UserService userService;
 
-    @RequestMapping(value = "/crud",method = RequestMethod.GET)
-    public List<User> getUser(){
+    @RequestMapping(value = "/crud", method = RequestMethod.GET)
+    public List<User> getUser() {
         List<User> aBoolean = userService.hello();
         return aBoolean;
     }
