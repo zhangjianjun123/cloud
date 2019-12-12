@@ -17,5 +17,6 @@
         <module>register</module>
         <module>register02</module>
         <module>register03</module>
+        <module>provider-hystrix</module>
     </modules>
 </project>
