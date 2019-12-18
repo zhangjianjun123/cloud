@@ -18,5 +18,7 @@
         <module>register02</module>
         <module>register03</module>
         <module>provider-hystrix</module>
+        <module>consumeer-demo-hystrix-dashboard</module>
+        <module>spring-cloud-zuul</module>
     </modules>
 </project>

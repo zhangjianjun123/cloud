@@ -10,3 +10,6 @@ server:
 spring:
   application:
     name: consumer-demo-boot
+feign:
+  hystrix:
+    enabled: true
