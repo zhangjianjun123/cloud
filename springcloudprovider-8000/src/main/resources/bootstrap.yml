@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:3344
+      name: springcloudprovider-8000
+      profile: dev
+      label: master

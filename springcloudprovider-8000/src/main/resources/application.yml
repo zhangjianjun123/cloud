@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: springcloudprovider-8000

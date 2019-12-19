@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: springcloud-cpnfig-client #从githp上获取资源的名称
+      profile: dev   #本次访问的事那个
+      label: master    #分支
+      uri: http://localhost:3344 #找到链接Githp的项目
